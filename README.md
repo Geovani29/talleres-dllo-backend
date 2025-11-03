@@ -173,7 +173,7 @@ Response:
 
 ---
 
-### Taller 3 - Problemas Algorítmicos
+### Taller 3
 
 #### 1. Desglosar String
 **POST** `/taller3/desglosar-string`
