@@ -13,10 +13,6 @@ function desglosarString(str, tipo) {
     }
     return contador;
 }
-console.log(desglosarString("murcielagos", "vocales"));
-console.log(desglosarString("murcielagos", "consonantes"));
-
-//---------------------------------------------------------------
 
 function twoSum(nums, obje) {
     const mapa = new Map();
@@ -30,10 +26,6 @@ function twoSum(nums, obje) {
     }
     return [];
 }
-console.log(twoSum([2, 7, 11, 15], 9));
-console.log(twoSum([3, 4, 2], 6));
-
-//---------------------------------------------------------------
 
 function conversionRomana(romano) {
     if (typeof romano !== "string" || romano.trim() === "") {
@@ -53,7 +45,7 @@ function conversionRomana(romano) {
         const siguiente = valores[s[i + 1]] ?? 0;
 
         if (actual === undefined) {
-            return "Númeor romano invalido"
+            return "Número romano inválido"
         }
 
         if (actual < siguiente) {
@@ -64,12 +56,6 @@ function conversionRomana(romano) {
     }
     return total;
 }
-console.log(conversionRomana("I2II"));
-console.log(conversionRomana("XIV"));
-console.log(conversionRomana("MMXXIV"));
-console.log(conversionRomana(2));
-
-//---------------------------------------------------------------
 
 function descomposicion(cadena) {
     const elementos = cadena.split(",");
@@ -87,7 +73,14 @@ function descomposicion(cadena) {
     }
     return [];
 }
-console.log(descomposicion("malhumor,al,hum,humor,m,mal,malhu"));
+
+// Exportar funciones
+module.exports = {
+    desglosarString,
+    twoSum,
+    conversionRomana,
+    descomposicion
+};
 
 
 

@@ -1,14 +1,10 @@
 //Punto 1 - convertidorTemp
-
 function convertidorTemp(temperaturaC){
     let tf = (temperaturaC * 9/5) + 32;
     return tf;
 }
 
-console.log(convertidorTemp(-40));
-
 //Punto 2 - resolvedor
-
 function resolvedor(a,b,c,select){
     let x1 = (-b + Math.sqrt(b**2 - 4*a*c)) / (2*a);
     let x2 = (-b - Math.sqrt(b**2 - 4*a*c)) / (2*a);
@@ -21,11 +17,8 @@ function resolvedor(a,b,c,select){
         return "Error";
     }
 }
-console.log(resolvedor(1,5,4,2));
-
 
 //Punto 3 - mejorParidad
-
 function mejorParidad(num){
     if(num % 2 === 0){
         return "El numero es par";
@@ -33,9 +26,6 @@ function mejorParidad(num){
         return "El numero es impar";
     }
 }
-console.log(mejorParidad(1));
-
-
 
 //Punto 4 - peorParidad
 function peorParidad(num){
@@ -65,7 +55,14 @@ function peorParidad(num){
         return "Error, se salió del rango";
     }
 }
-console.log(peorParidad(2));
+
+// Exportar funciones
+module.exports = {
+    convertidorTemp,
+    resolvedor,
+    mejorParidad,
+    peorParidad
+};
 
 
 
